@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const atividadeController = require('../controllers/atividadeController');
+const disciplinaController = require('../controllers/disciplinaController');
 
-router.post('/', atividadeController.criar);
-router.get('/disciplina/:id_disciplina', atividadeController.listar);
-router.put('/:id', atividadeController.editar);
-router.delete('/:id', atividadeController.excluir);
+router.post('/', disciplinaController.criar);
+router.get('/:id_usuario', disciplinaController.listar);
+router.put('/:id', disciplinaController.editar);
+router.delete('/:id', disciplinaController.excluir);
 
 module.exports = router;

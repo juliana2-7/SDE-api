@@ -37,6 +37,18 @@ db.serialize(() => {
         id_disciplina INTEGER NOT NULL,
         FOREIGN KEY (id_disciplina) REFERENCES disciplinas(id)
     )`);
+
+    db.run(`CREATE TABLE IF NOT EXISTS metas (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        titulo TEXT NOT NULL,
+        descricao TEXT,
+        data_alvo TEXT NOT NULL,
+        horas_previstas INTEGER DEFAULT 0,
+        horas_realizadas INTEGER DEFAULT 0,
+        status TEXT DEFAULT 'EM_ANDAMENTO',
+        id_usuario INTEGER NOT NULL,
+        FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+    )`);
 });
 
 module.exports = db;
