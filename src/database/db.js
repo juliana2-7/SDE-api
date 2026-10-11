@@ -49,6 +49,15 @@ db.serialize(() => {
         id_usuario INTEGER NOT NULL,
         FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
     )`);
+
+    db.run(`CREATE TABLE IF NOT EXISTS lembretes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        data_hora TEXT NOT NULL,
+        tipo TEXT NOT NULL,
+        enviado INTEGER DEFAULT 0,
+        id_atividade INTEGER NOT NULL,
+        FOREIGN KEY (id_atividade) REFERENCES atividades(id)
+    )`);
 });
 
 module.exports = db;
