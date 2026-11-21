@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDE - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container-dashboard">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="user-info">
+                <span class="saudacao">Olá, <strong id="nomeUsuario">Aluno(a)</strong>!</span>
+                <span class="data-atual" id="dataAtual"></span>
+            </div>
+            <div class="acoes">
+                <button class="btn-sair" id="btnSair">Sair</button>
+            </div>
+        </header>
+
+        <!-- Calendário Resumido -->
+        <section class="calendario-resumo">
+            <h2>📅 <span id="mesAno"></span></h2>
+            <div class="dias-semana">
+                <span>Dom</span><span>Seg</span><span>Ter</span>
+                <span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+            </div>
+            <div class="dias-mes" id="diasMes">
+                <!-- Preenchido pelo JavaScript -->
+            </div>
+        </section>
+
+        <!-- Provas da Semana -->
+        <section class="provas-semana">
+            <h2>📚 PROVAS DA SEMANA</h2>
+            <ul id="listaProvas">
+                <li>Nenhuma prova cadastrada esta semana.</li>
+            </ul>
+        </section>
+
+        <!-- Metas de Estudo -->
+        <section class="metas-estudo">
+            <h2>🎯 METAS DE ESTUDO</h2>
+            <ul id="listaMetas">
+                <li>Nenhuma meta definida.</li>
+            </ul>
+        </section>
+
+        <!-- Botão Nova Atividade -->
+        <div class="botao-nova-atividade">
+            <button class="btn-nova-atividade" id="btnNovaAtividade">+ NOVA ATIVIDADE</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

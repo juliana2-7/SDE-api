@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDE - Cadastro</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Logo / Título -->
+        <div class="logo">
+            <h1>📚 SDE</h1>
+            <p>Crie sua conta</p>
+        </div>
+
+        <!-- Formulário de Cadastro -->
+        <form id="formCadastro" class="form">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required />
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Mínimo 6 caracteres" required />
+
+            <label for="confirmarSenha">Confirmar senha</label>
+            <input type="password" id="confirmarSenha" placeholder="Digite a senha novamente" required />
+
+            <label for="serie">Série escolar</label>
+            <select id="serie" required>
+                <option value="">Selecione...</option>
+                <option value="6º ano">6º ano</option>
+                <option value="7º ano">7º ano</option>
+                <option value="8º ano">8º ano</option>
+                <option value="9º ano">9º ano</option>
+            </select>
+
+            <button type="submit" class="btn-cadastrar">Cadastrar</button>
+        </form>
+
+        <!-- Link para Login -->
+        <div class="links">
+            <a href="index.html">Já tem conta? <strong>Faça login</strong></a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
